@@ -1,4 +1,4 @@
-class VerseModel {
+class detailsModel {
   int? id;
   int? verseNumber;
   int? chapterNumber;
@@ -9,7 +9,7 @@ class VerseModel {
   List<Commentary>? translations;
   List<Commentary>? commentaries;
 
-  VerseModel({
+  detailsModel({
     this.id,
     this.verseNumber,
     this.chapterNumber,
@@ -21,7 +21,7 @@ class VerseModel {
     this.commentaries,
   });
 
-  factory VerseModel.fromJson(Map<String, dynamic> json) => VerseModel(
+  factory detailsModel.fromJson(Map<String, dynamic> json) => detailsModel(
     id: json["id"],
     verseNumber: json["verse_number"],
     chapterNumber: json["chapter_number"],
