@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:final_exam/bhagvat%20gita/controller/home_controller.dart';
 import 'package:final_exam/bhagvat%20gita/model/home_model.dart';
-import 'package:final_exam/bhagvat%20gita/model/verse_model.dart';
+import 'package:final_exam/bhagvat%20gita/model/details_model.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
@@ -27,6 +27,6 @@ class ApiHelper {
       "X-RapidAPI-Host": "bhagavad-gita3.p.rapidapi.com",
     });
     var json = jsonDecode(response.body);
-    return json.map((e) => VerseModel.fromJson(e)).toList();
+    return json.map((e) => detailsModel.fromJson(e)).toList();
   }
 }
